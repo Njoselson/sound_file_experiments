@@ -1,0 +1,1 @@
+duration=0.469891, freq=176.00, volume=49.61, shape=square

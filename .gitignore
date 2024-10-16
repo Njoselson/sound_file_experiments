@@ -1,0 +1,6 @@
+# Ignore .env files
+.env
+# Ignore python dependencies
+.sound_file_experiments/
+# Ignore random sounds
+temp_sound.wav

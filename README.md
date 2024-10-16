@@ -1,35 +1,35 @@
 # Sound File Experiments
 
-This repository contains a collection of Python scripts for experimenting with sound file generation, manipulation, and transcription. The project utilizes various libraries and tools to create, modify, and analyze audio files.
+This repository contains a collection of Python scripts for experimenting with adversarial audio generation. The project aims to create sound files that, when transcribed by speech-to-text models, produce outputs significantly different from the actual spoken words. It utilizes various libraries and tools to generate, manipulate, and analyze these adversarial audio files. Additionally, the project employs Bayesian optimization techniques to fine-tune the parameters of the sound distribution, with the goal of producing increasingly unusual and unexpected transcriptions from the speech-to-text model.
 
-## Features
-
-- Generate high-pitched sound files
-- Combine generated sounds with spoken words
-- Transcribe audio files using OpenAI's Whisper model
+- Transcribe audio files using OpenAI's Whisper model or open-source Whisper model
 - Experiment with different sound parameters (duration, frequency, volume, and waveform shape)
+- Utils for manipulating audio files
 
 ## Dependencies
-
-- NumPy
-- SciPy
-- PyDub
-- OpenAI Whisper
-- FFmpeg
 
 ## Usage
 
 1. Install the required dependencies:
    ```
-   pip install numpy scipy pydub openai-whisper
+   python3 -m venv .sound_file_experiments
+   source .sound_file_experiments/bin/activate
+   pip install numpy scipy pydub openai-whisper scikit-optimize python-dotenv sounddevice
    ```
 
 2. Ensure FFmpeg is installed on your system. On macOS, you can use Homebrew:
    ```
    brew install ffmpeg
    ```
+3. Add your OpenAI API key to the `.env` file
 
-3. Run the various Python scripts to generate and manipulate sound files.
+4. Run the training of the transcription distortion sound
+```
+python transcription_distortion.py
+```
+
+
+# Sound File Utils
 
 ## Shortening Audio Files
 
